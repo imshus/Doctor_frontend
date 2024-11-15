@@ -1,5 +1,6 @@
 import React from 'react'
 import { assets } from '../assets/assets'
+import { NavLink } from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -14,10 +15,10 @@ const Footer = () => {
         <div>
           <p className='text-xl font-medium mb-5'>COMPANY</p>
           <ul className='flex flex-col gap-2 text-gray-600'>
-            <li>Home</li>
-            <li>About us</li>
-            <li>Delivery</li>
-            <li>Privacy policy</li>
+            <li><NavLink onClick={() => setShowMenu(false)} to='/'><p className='px-4 py-2 rounded full inline-block'>HOME</p></NavLink></li>
+            <li><NavLink onClick={() => setShowMenu(false)} to='/doctors' ><p className='px-4 py-2 rounded full inline-block'>ALL DOCTORS</p></NavLink></li>
+            <li><NavLink onClick={() => setShowMenu(false)} to='/about' ><p className='px-4 py-2 rounded full inline-block'>ABOUT</p></NavLink></li>
+            <li><NavLink onClick={() => setShowMenu(false)} to='/contact' ><p className='px-4 py-2 rounded full inline-block'>CONTACT</p></NavLink></li>
           </ul>
         </div>
 
@@ -30,14 +31,3 @@ const Footer = () => {
         </div>
 
       </div>
-
-      <div>
-        <hr />
-        <p className='py-5 text-sm text-center'>Copyright 2024 @ Shudhanshu Kumar - All Right Reserved.</p>
-      </div>
-
-    </div>
-  )
-}
-
-export default Footer
